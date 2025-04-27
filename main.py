@@ -10,7 +10,7 @@ from tensorflow import keras
 
 app = FastAPI()
 
-model_path = "resnet.h5"
+model_path = "mobilenet3.h5"
 model = keras.models.load_model(model_path)
 
 with open("class_names_resnet.json", "r") as f:
