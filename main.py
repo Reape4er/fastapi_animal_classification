@@ -4,11 +4,12 @@ import io
 import json
 import numpy as np
 from tensorflow import keras
+from tensorflow.keras.applications import MobileNetV3Small
 
 app = FastAPI()
 
 model_path = "mobilenet3.h5"
-model = keras.models.load_model(model_path, compile=False)
+model = keras.models.load_model('model.h5', compile=False, custom_objects={'MobileNetV3Small': MobileNetV3Small})
 
 with open("class_names_resnet.json", "r") as f:
     class_names = json.load(f)
