@@ -25,7 +25,6 @@ async def predict(file: UploadFile = File(...)):
 
     image_array = np.array(image)
     image_array = np.expand_dims(image_array, axis=0)
-    image_array = preprocess_input(image_array)
 
     # Предсказание класса
     prediction = model.predict(image_array)
