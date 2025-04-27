@@ -1,11 +1,8 @@
 from fastapi import FastAPI, File, UploadFile
-from keras.applications.resnet50 import preprocess_input
 from PIL import Image
-from pydantic import BaseModel
 import io
 import json
 import numpy as np
-import tensorflow as tf
 from tensorflow import keras
 
 app = FastAPI()
